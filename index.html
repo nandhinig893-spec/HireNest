@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HireNest | Your career starts here</title>
+    <meta
+      name="description"
+      content="HireNest helps students and fresh graduates build resumes, prepare for interviews, improve LinkedIn profiles, and launch careers with confidence."
+    />
+    <meta name="theme-color" content="#F7B6D2" />
+    <meta property="og:title" content="HireNest | Your career starts here" />
+    <meta
+      property="og:description"
+      content="Career preparation tools for students and fresh graduates, from resume guidance to interview prep and LinkedIn optimization."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" />
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path d="M18 6 6 18M6 6l12 12" />
+      </symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24">
+        <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z" />
+        <path d="M14 2v5h5M9 13h6M9 17h4" />
+      </symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24">
+        <path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-6a8 8 0 1 1 18-5Z" />
+        <path d="M8 11h8M8 15h5" />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z" />
+        <path d="M2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+      </symbol>
+      <symbol id="icon-spark" viewBox="0 0 24 24">
+        <path d="m12 2 1.7 5.3L19 9l-5.3 1.7L12 16l-1.7-5.3L5 9l5.3-1.7zM19 14l.9 2.6 2.6.9-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9zM5 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z" />
+      </symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z" />
+      </symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24">
+        <path d="M20 21a8 8 0 1 0-16 0" />
+        <path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" />
+      </symbol>
+      <symbol id="icon-briefcase" viewBox="0 0 24 24">
+        <path d="M10 6V5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v1" />
+        <path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <path d="M3 13h18M9 13v2h6v-2" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m20 6-11 11-5-5" />
+      </symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24">
+        <path d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol id="icon-twitter" viewBox="0 0 24 24">
+        <path d="M4 4l16 16M20 4 4 20" />
+      </symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" />
+        <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM17.5 6.5h.01" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+        <path d="m22 6-10 7L2 6" />
+      </symbol>
+    </svg>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="HireNest home">
+          <img class="brand-logo-img" src="assets/hirenest-logo.png" alt="HireNest" />
+          <span class="sr-only">HireNest</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <svg class="icon nav-open"><use href="#icon-menu"></use></svg>
+          <svg class="icon nav-close"><use href="#icon-close"></use></svg>
+        </button>
+
+        <div class="nav-panel" id="nav-panel">
+          <a href="#home">Home</a>
+          <a href="#resume-builder">Resume Builder</a>
+          <a href="#interview-prep">Interview Prep</a>
+          <a href="#linkedin">LinkedIn</a>
+          <a href="#resources">Career Resources</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <img class="hero-logo-img" src="assets/hirenest-logo.png" alt="HireNest" />
+            <p class="eyebrow">Your career starts here.</p>
+            <h1>Confused about building your resume?</h1>
+            <p class="hero-subtitle">
+              No worries, we've got you. HireNest helps students and fresh graduates create professional
+              resumes, prepare for interviews, optimize LinkedIn profiles, and launch their careers with
+              confidence.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#final-cta">
+                Get Started
+                <svg class="icon"><use href="#icon-arrow"></use></svg>
+              </a>
+              <a class="btn btn-secondary" href="#why">Learn More</a>
+            </div>
+            <div class="trust-row" aria-label="HireNest benefits">
+              <span>ATS focused</span>
+              <span>Student friendly</span>
+              <span>Career ready</span>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Career growth illustration">
+            <div class="resume-preview">
+              <div class="preview-header">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="candidate-row">
+                <div class="avatar"></div>
+                <div>
+                  <strong>Graduate Profile</strong>
+                  <span>Role-ready resume</span>
+                </div>
+              </div>
+              <div class="resume-lines">
+                <span class="line-wide"></span>
+                <span></span>
+                <span class="line-mid"></span>
+              </div>
+              <div class="score-card">
+                <svg class="icon"><use href="#icon-check"></use></svg>
+                <div>
+                  <strong>92%</strong>
+                  <span>ATS match score</span>
+                </div>
+              </div>
+            </div>
+            <div class="growth-card">
+              <span class="metric">3x</span>
+              <span>More confident applications</span>
+              <div class="chart" aria-hidden="true">
+                <i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <div class="coach-card">
+              <svg class="icon"><use href="#icon-chat"></use></svg>
+              <span>Interview answer coach</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="why">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Why Choose HireNest?</p>
+            <h2>Career prep that feels clear, calm, and practical.</h2>
+            <p>
+              Students should not need expensive coaching or confusing templates to get started.
+              HireNest brings the essentials into one simple, guided experience.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <svg class="icon feature-icon"><use href="#icon-file"></use></svg>
+              <h3>ATS-friendly resume guidance</h3>
+              <p>Create polished resumes that are easy for recruiters and screening systems to read.</p>
+            </article>
+            <article class="feature-card reveal">
+              <svg class="icon feature-icon"><use href="#icon-chat"></use></svg>
+              <h3>Interview preparation</h3>
+              <p>Practice common questions, structure stronger answers, and walk in with confidence.</p>
+            </article>
+            <article class="feature-card reveal">
+              <svg class="icon feature-icon"><use href="#icon-linkedin"></use></svg>
+              <h3>LinkedIn optimization</h3>
+              <p>Shape a student profile into a professional story recruiters can quickly understand.</p>
+            </article>
+            <article class="feature-card reveal">
+              <svg class="icon feature-icon"><use href="#icon-spark"></use></svg>
+              <h3>AI-powered career assistance</h3>
+              <p>Get guided suggestions for resumes, applications, interviews, and growth plans.</p>
+            </article>
+            <article class="feature-card reveal feature-wide">
+              <svg class="icon feature-icon"><use href="#icon-book"></use></svg>
+              <h3>Career resources</h3>
+              <p>
+                Access beginner-friendly playbooks for portfolios, job applications, networking,
+                internships, and early-career decisions.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft-section" id="about">
+        <div class="container split-layout">
+          <div class="section-heading compact reveal">
+            <p class="eyebrow">How It Works</p>
+            <h2>Three steps from unsure to application-ready.</h2>
+          </div>
+
+          <div class="steps">
+            <article class="step-card reveal">
+              <span class="step-number">01</span>
+              <div>
+                <h3>Build your resume</h3>
+                <p>Start with guided sections, strong phrasing, and recruiter-friendly formatting.</p>
+              </div>
+            </article>
+            <article class="step-card reveal">
+              <span class="step-number">02</span>
+              <div>
+                <h3>Improve your profile</h3>
+                <p>Turn academic projects, internships, and skills into a clear professional profile.</p>
+              </div>
+            </article>
+            <article class="step-card reveal">
+              <span class="step-number">03</span>
+              <div>
+                <h3>Apply with confidence</h3>
+                <p>Prepare for interviews, track opportunities, and take your next step with less stress.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="resume-builder">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Our Services</p>
+            <h2>Everything students need to prepare for the first big opportunity.</h2>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <div class="service-top">
+                <svg class="icon service-icon"><use href="#icon-file"></use></svg>
+                <span class="status-tag live">Available</span>
+              </div>
+              <h3>Resume Builder</h3>
+              <p>Structured resume guidance, formatting support, and impact-focused bullet suggestions.</p>
+            </article>
+
+            <article class="service-card reveal" id="interview-prep">
+              <div class="service-top">
+                <svg class="icon service-icon"><use href="#icon-chat"></use></svg>
+                <span class="status-tag live">Available</span>
+              </div>
+              <h3>Interview Preparation</h3>
+              <p>Practice prompts, answer frameworks, and confidence-building preparation flows.</p>
+            </article>
+
+            <article class="service-card reveal" id="linkedin">
+              <div class="service-top">
+                <svg class="icon service-icon"><use href="#icon-linkedin"></use></svg>
+                <span class="status-tag live">Available</span>
+              </div>
+              <h3>LinkedIn Profile Guide</h3>
+              <p>Headline, summary, project, and experience guidance for early-career profiles.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-top">
+                <svg class="icon service-icon"><use href="#icon-spark"></use></svg>
+                <span class="status-tag">Coming Soon</span>
+              </div>
+              <h3>AI Career Assistant</h3>
+              <p>Personalized suggestions for applications, skill gaps, interview prep, and career paths.</p>
+            </article>
+
+            <article class="service-card reveal" id="resources">
+              <div class="service-top">
+                <svg class="icon service-icon"><use href="#icon-briefcase"></use></svg>
+                <span class="status-tag">Coming Soon</span>
+              </div>
+              <h3>Portfolio Builder</h3>
+              <p>Showcase projects, internships, certifications, and case studies in a polished format.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft-section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Testimonials</p>
+            <h2>Built for students taking their first professional step.</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card reveal">
+              <p>
+                "HireNest made my resume look professional without making the process feel overwhelming.
+                I finally understood what recruiters look for."
+              </p>
+              <div class="testimonial-author">
+                <span>AP</span>
+                <div>
+                  <strong>Ananya Patel</strong>
+                  <small>Final-year engineering student</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <p>
+                "The interview prep helped me turn scattered project details into clear answers. It felt
+                like having a career mentor beside me."
+              </p>
+              <div class="testimonial-author">
+                <span>RS</span>
+                <div>
+                  <strong>Rahul Sharma</strong>
+                  <small>Recent B.Com graduate</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <p>
+                "I had no idea how to explain my internships on LinkedIn. HireNest gave me a simple path
+                and my profile now feels recruiter-ready."
+              </p>
+              <div class="testimonial-author">
+                <span>MK</span>
+                <div>
+                  <strong>Meera Krishnan</strong>
+                  <small>MBA fresher</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section">
+        <div class="container split-layout">
+          <div class="section-heading compact reveal">
+            <p class="eyebrow">FAQ</p>
+            <h2>Questions students usually ask first.</h2>
+            <p>Simple answers now, deeper career tools as HireNest grows.</p>
+          </div>
+
+          <div class="faq-list reveal">
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                Is HireNest only for fresh graduates?
+                <svg class="icon"><use href="#icon-chevron"></use></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  HireNest is designed for students, interns, and fresh graduates, but anyone beginning a
+                  career transition can use the guidance.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                Will the resume guidance be ATS-friendly?
+                <svg class="icon"><use href="#icon-chevron"></use></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. The resume experience is planned around clear structure, readable formatting, and
+                  keyword-aware content that supports applicant tracking systems.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                What features are coming next?
+                <svg class="icon"><use href="#icon-chevron"></use></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Future expansion can include an AI resume builder, AI interview coach, portfolio builder,
+                  career blog, job board, student dashboard, login system, and pricing page.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                Can I use HireNest before I have work experience?
+                <svg class="icon"><use href="#icon-chevron"></use></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Absolutely. HireNest helps translate projects, coursework, volunteering, certifications,
+                  and campus experience into professional career material.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta section-shell" id="final-cta">
+        <div class="container cta-panel reveal">
+          <div>
+            <p class="eyebrow">Start with clarity</p>
+            <h2>Ready to launch your career?</h2>
+            <p>Join HireNest and take the first step toward your dream job.</p>
+          </div>
+          <a class="btn btn-primary" href="#contact">
+            Get Started
+            <svg class="icon"><use href="#icon-arrow"></use></svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#home" aria-label="HireNest home">
+            <img class="brand-logo-img" src="assets/hirenest-logo.png" alt="HireNest" />
+            <span class="sr-only">HireNest</span>
+          </a>
+          <p>Your career starts here.</p>
+          <div class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="HireNest on LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
+            <a href="#" aria-label="HireNest on X"><svg class="icon"><use href="#icon-twitter"></use></svg></a>
+            <a href="#" aria-label="HireNest on Instagram"><svg class="icon"><use href="#icon-instagram"></use></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#resume-builder">Resume Builder</a></li>
+            <li><a href="#interview-prep">Interview Prep</a></li>
+            <li><a href="#linkedin">LinkedIn Guide</a></li>
+            <li><a href="#resources">Career Resources</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li>
+              <a href="mailto:thyhirenest@gmail.com">
+                <svg class="icon inline-icon"><use href="#icon-mail"></use></svg>
+                thyhirenest@gmail.com
+              </a>
+            </li>
+            <li><a href="#about">About HireNest</a></li>
+            <li><a href="#final-cta">Get Started</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> HireNest. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
