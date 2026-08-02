@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Resume Builder | HireNest</title>
+<meta name="description" content="Build, edit, and download your resume with HireNest's free Resume Builder." />
+<link rel="icon" type="image/png" href="hirenest-logo.png" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="resume-builder.css" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+<header class="rb-header">
+  <a href="index.html" class="rb-logo">
+    <img src="hirenest-logo.png" alt="HireNest" height="32" />
+    <span>HireNest</span>
+  </a>
+  <div id="rb-user-info" class="rb-user-info" style="display:none;">
+    <span id="rb-user-email"></span>
+    <button id="rb-signout-btn" class="rb-btn-secondary">Sign Out</button>
+  </div>
+</header>
+
+<!-- AUTH SCREEN -->
+<section id="rb-auth-screen" class="rb-auth-screen">
+  <div class="rb-auth-card">
+    <h1>Sign in to build your resume</h1>
+    <p>Enter your email and we'll send you a magic link — no password needed.</p>
+    <input type="email" id="rb-email-input" placeholder="you@example.com" />
+    <button id="rb-send-link-btn" class="rb-btn-primary">Send Magic Link</button>
+    <p id="rb-auth-status" class="rb-auth-status"></p>
+  </div>
+</section>
+
+<!-- APP SCREEN -->
+<section id="rb-app-screen" class="rb-app-screen" style="display:none;">
+  <div class="rb-form-panel">
+    <h2>Your Details</h2>
+
+    <label>Full Name</label>
+    <input type="text" id="f-name" placeholder="Jane Doe" />
+
+    <label>Email</label>
+    <input type="email" id="f-email" placeholder="jane@example.com" />
+
+    <label>Phone</label>
+    <input type="text" id="f-phone" placeholder="+91 98765 43210" />
+
+    <label>Location</label>
+    <input type="text" id="f-location" placeholder="Chennai, India" />
+
+    <label>LinkedIn URL</label>
+    <input type="text" id="f-linkedin" placeholder="linkedin.com/in/janedoe" />
+
+    <label>Professional Summary</label>
+    <textarea id="f-summary" rows="3" placeholder="A short 2-3 line summary about you"></textarea>
+
+    <label>Education</label>
+    <textarea id="f-education" rows="3" placeholder="Degree, Institution, Year — one per line"></textarea>
+
+    <label>Experience</label>
+    <textarea id="f-experience" rows="5" placeholder="Role, Company, Duration, and key points — one per line"></textarea>
+
+    <label>Skills</label>
+    <input type="text" id="f-skills" placeholder="JavaScript, Communication, Excel (comma separated)" />
+
+    <div class="rb-action-row">
+      <button id="rb-save-btn" class="rb-btn-primary">Save Resume</button>
+      <button id="rb-pdf-btn" class="rb-btn-secondary">Download PDF</button>
+    </div>
+    <p id="rb-save-status" class="rb-save-status"></p>
+  </div>
+
+  <div class="rb-preview-panel">
+    <div id="rb-preview" class="rb-resume-preview">
+      <h1 id="p-name">Your Name</h1>
+      <p id="p-contact" class="p-contact"></p>
+      <div class="p-section">
+        <h3>Summary</h3>
+        <p id="p-summary"></p>
+      </div>
+      <div class="p-section">
+        <h3>Experience</h3>
+        <p id="p-experience"></p>
+      </div>
+      <div class="p-section">
+        <h3>Education</h3>
+        <p id="p-education"></p>
+      </div>
+      <div class="p-section">
+        <h3>Skills</h3>
+        <p id="p-skills"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="resume-builder.js"></script>
+</body>
+</html>
