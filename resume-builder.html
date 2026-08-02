@@ -6,6 +6,8 @@
 <title>Resume Builder | HireNest</title>
 <meta name="description" content="Build, edit, and download your resume with HireNest's free Resume Builder." />
 <link rel="icon" type="image/png" href="hirenest-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="resume-builder.css" />
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -15,7 +17,7 @@
 
 <header class="rb-header">
   <a href="index.html" class="rb-logo">
-    <img src="hirenest-logo.png" alt="HireNest" height="32" />
+    <img src="hirenest-logo.png" alt="HireNest" height="30" />
     <span>HireNest</span>
   </a>
   <div id="rb-user-info" class="rb-user-info" style="display:none;">
@@ -55,6 +57,12 @@
     <label>LinkedIn URL</label>
     <input type="text" id="f-linkedin" placeholder="linkedin.com/in/janedoe" />
 
+    <label>GitHub URL</label>
+    <input type="text" id="f-github" placeholder="github.com/janedoe" />
+
+    <label>Portfolio Website</label>
+    <input type="text" id="f-portfolio" placeholder="janedoe.com" />
+
     <label>Professional Summary</label>
     <textarea id="f-summary" rows="3" placeholder="A short 2-3 line summary about you"></textarea>
 
@@ -78,6 +86,7 @@
     <div id="rb-preview" class="rb-resume-preview">
       <h1 id="p-name">Your Name</h1>
       <p id="p-contact" class="p-contact"></p>
+      <div id="p-links" class="p-links-row"></div>
       <div class="p-section">
         <h3>Summary</h3>
         <p id="p-summary"></p>

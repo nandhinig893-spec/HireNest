@@ -19,7 +19,7 @@ const pdfBtn = document.getElementById("rb-pdf-btn");
 const signOutBtn = document.getElementById("rb-signout-btn");
 const saveStatus = document.getElementById("rb-save-status");
 
-const fields = ["name", "email", "phone", "location", "linkedin", "summary", "education", "experience", "skills"];
+const fields = ["name", "email", "phone", "location", "linkedin", "github", "portfolio", "summary", "education", "experience", "skills"];
 
 let currentUser = null;
 
@@ -120,6 +120,7 @@ saveBtn.addEventListener("click", async () => {
 
   if (error) {
     saveStatus.textContent = "Error saving: " + error.message;
+    console.error(error);
   } else {
     saveStatus.textContent = "Saved!";
     setTimeout(() => (saveStatus.textContent = ""), 2000);
@@ -133,12 +134,32 @@ fields.forEach((f) => {
 });
 
 function updatePreview() {
-  const val = (id) => document.getElementById("f-" + id).value;
+  const val = (id) => document.getElementById("f-" + id).value.trim();
 
   document.getElementById("p-name").textContent = val("name") || "Your Name";
 
-  const contactParts = [val("email"), val("phone"), val("location"), val("linkedin")].filter(Boolean);
+  const contactParts = [val("email"), val("phone"), val("location")].filter(Boolean);
   document.getElementById("p-contact").textContent = contactParts.join("  •  ");
+
+  // build link badges safely (no raw HTML injection)
+  const linksRow = document.getElementById("p-links");
+  linksRow.innerHTML = "";
+  const linkDefs = [
+    { value: val("linkedin"), label: "LinkedIn" },
+    { value: val("github"), label: "GitHub" },
+    { value: val("portfolio"), label: "Portfolio" }
+  ];
+  linkDefs.forEach((l) => {
+    if (!l.value) return;
+    const a = document.createElement("a");
+    let href = l.value;
+    if (!/^https?:\/\//i.test(href)) href = "https://" + href;
+    a.href = href;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = l.label;
+    linksRow.appendChild(a);
+  });
 
   document.getElementById("p-summary").textContent = val("summary");
   document.getElementById("p-experience").textContent = val("experience");
@@ -150,11 +171,19 @@ function updatePreview() {
 pdfBtn.addEventListener("click", () => {
   const preview = document.getElementById("rb-preview");
   const name = document.getElementById("f-name").value || "resume";
+
+  // sticky positioning breaks html2canvas capture — temporarily disable it
+  preview.style.position = "static";
+  preview.style.top = "auto";
+
   html2pdf().from(preview).set({
     margin: 0.5,
     filename: name.replace(/\s+/g, "_") + "_resume.pdf",
     image: { type: "jpeg", quality: 0.98 },
-    html2canvas: { scale: 2 },
+    html2canvas: { scale: 2, useCORS: true },
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" }
-  }).save();
+  }).save().then(() => {
+    preview.style.position = "";
+    preview.style.top = "";
+  });
 });
