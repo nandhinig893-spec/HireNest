@@ -1,171 +1,170 @@
-/* Resume Builder styles - self-contained, doesn't touch existing styles.css */
 
+/* Resume Builder — matched to HireNest navy template */
+ 
+:root {
+  --rb-navy: #1a3c61;
+  --rb-ink: #14141c;
+  --rb-muted: #6b7280;
+  --rb-border: #d9d9d9;
+  --rb-bg: #f5f6f8;
+  --rb-radius: 10px;
+}
+ 
+body {
+  background: var(--rb-bg);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--rb-ink);
+}
+ 
 .rb-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
-  border-bottom: 1px solid #eee;
+  padding: 18px 40px;
+  border-bottom: 1px solid var(--rb-border);
   background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .rb-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   text-decoration: none;
-  color: #111;
-  font-weight: 700;
-  font-size: 18px;
+  color: var(--rb-navy);
+  font-weight: 800;
+  font-size: 17px;
 }
 .rb-user-info {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 14px;
-  color: #444;
+  gap: 14px;
+  font-size: 13px;
+  color: var(--rb-muted);
 }
-
+ 
 .rb-btn-primary {
-  background: #4f46e5;
+  background: var(--rb-navy);
   color: #fff;
   border: none;
-  padding: 10px 18px;
+  padding: 11px 22px;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
+  transition: opacity 0.12s ease;
 }
-.rb-btn-primary:hover { background: #4338ca; }
-
+.rb-btn-primary:hover { opacity: 0.85; }
+ 
 .rb-btn-secondary {
   background: #fff;
-  color: #4f46e5;
-  border: 1px solid #4f46e5;
-  padding: 10px 18px;
+  color: var(--rb-navy);
+  border: 1.5px solid var(--rb-navy);
+  padding: 11px 22px;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
 }
-.rb-btn-secondary:hover { background: #f5f4ff; }
-
+.rb-btn-secondary:hover { background: #eef2f7; }
+ 
 /* Auth screen */
 .rb-auth-screen {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  min-height: 80vh;
   padding: 24px;
 }
 .rb-auth-card {
-  max-width: 400px;
+  max-width: 380px;
   width: 100%;
   text-align: center;
+  background: #fff;
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius);
+  padding: 40px 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.05);
 }
-.rb-auth-card h1 {
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-.rb-auth-card p {
-  color: #666;
-  margin-bottom: 20px;
-  font-size: 14px;
-}
+.rb-auth-card h1 { font-size: 22px; font-weight: 800; margin-bottom: 8px; color: var(--rb-navy); }
+.rb-auth-card p { color: var(--rb-muted); margin-bottom: 24px; font-size: 14px; line-height: 1.5; }
 .rb-auth-card input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  font-size: 14px;
+  width: 100%; padding: 13px 14px; border: 1.5px solid var(--rb-border);
+  border-radius: 6px; margin-bottom: 14px; font-size: 14px; font-family: inherit; outline: none;
 }
-.rb-auth-status {
-  margin-top: 12px;
-  font-size: 13px;
-  color: #4f46e5;
-}
-
-/* App screen - two panel layout */
+.rb-auth-card input:focus { border-color: var(--rb-navy); }
+.rb-auth-status { margin-top: 14px; font-size: 13px; color: var(--rb-navy); font-weight: 600; }
+ 
+/* App screen */
 .rb-app-screen {
   display: flex;
-  gap: 24px;
-  padding: 24px 32px;
-  max-width: 1200px;
+  gap: 28px;
+  padding: 32px;
+  max-width: 1300px;
   margin: 0 auto;
+  align-items: flex-start;
 }
 .rb-form-panel {
   flex: 1;
-  min-width: 320px;
+  min-width: 340px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius);
+  padding: 24px;
 }
+.rb-form-panel h2 { font-size: 16px; font-weight: 800; margin-bottom: 16px; color: var(--rb-navy); }
 .rb-form-panel label {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  margin: 12px 0 4px;
-  color: #333;
+  display: block; font-size: 12px; font-weight: 700; color: var(--rb-muted);
+  text-transform: uppercase; letter-spacing: 0.03em; margin: 14px 0 6px;
 }
-.rb-form-panel input,
-.rb-form-panel textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-  font-family: inherit;
+.rb-form-panel input, .rb-form-panel textarea {
+  width: 100%; padding: 10px 12px; border: 1.5px solid var(--rb-border);
+  border-radius: 6px; font-size: 13.5px; font-family: inherit; outline: none;
 }
-.rb-action-row {
-  display: flex;
-  gap: 12px;
-  margin-top: 20px;
-}
-.rb-save-status {
-  margin-top: 8px;
-  font-size: 13px;
-  color: #16a34a;
-}
-
-.rb-preview-panel {
-  flex: 1;
-  min-width: 320px;
-}
+.rb-form-panel input:focus, .rb-form-panel textarea:focus { border-color: var(--rb-navy); }
+.rb-action-row { display: flex; gap: 12px; margin-top: 20px; }
+.rb-save-status { margin-top: 10px; font-size: 13px; color: var(--rb-navy); font-weight: 600; }
+ 
+.rb-preview-panel { flex: 1; min-width: 380px; }
 .rb-resume-preview {
   background: #fff;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 32px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  border: 1px solid var(--rb-border);
+  border-radius: 4px;
+  padding: 44px 48px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
   position: sticky;
-  top: 24px;
+  top: 90px;
+  text-align: center;
 }
 .rb-resume-preview h1 {
-  font-size: 22px;
-  margin-bottom: 4px;
+  font-size: 26px; font-weight: 800; letter-spacing: 0.02em;
+  color: var(--rb-navy); margin-bottom: 4px;
 }
-.p-contact {
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 16px;
+.p-role { color: var(--rb-navy); font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+.p-contact { font-size: 12px; color: var(--rb-muted); margin-bottom: 10px; }
+.p-keywords {
+  font-size: 12px; font-weight: 700; color: var(--rb-navy);
+  padding-top: 10px; border-top: 1px solid #e2e2e2; padding-bottom: 4px;
 }
-.p-section {
-  margin-top: 16px;
-}
+.p-section { margin-top: 20px; text-align: left; }
 .p-section h3 {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #4f46e5;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 4px;
-  margin-bottom: 6px;
+  font-size: 13px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--rb-navy);
+  border-bottom: 1.5px solid #cfd8e3; padding-bottom: 5px; margin-bottom: 8px;
 }
 .p-section p {
-  font-size: 13px;
-  color: #333;
-  white-space: pre-line;
-  line-height: 1.5;
+  font-size: 13px; color: #222; white-space: pre-line; line-height: 1.65; text-align: left;
 }
-
-@media (max-width: 800px) {
-  .rb-app-screen { flex-direction: column; }
-  .rb-resume-preview { position: static; }
+.p-footer {
+  margin-top: 28px; font-size: 10.5px; color: #999; font-style: italic;
+}
+ 
+@media (max-width: 900px) {
+  .rb-app-screen { flex-direction: column; padding: 16px; }
+  .rb-form-panel { max-height: none; }
+  .rb-resume-preview { position: static; padding: 28px 22px; }
+  .rb-header { padding: 14px 20px; }
 }
