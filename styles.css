@@ -3,15 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>HireNest | ATS-Friendly Resume Templates</title>
-<meta name="description" content="Affordable, ATS-friendly resume templates for students and fresh graduates. Get 2 professional resumes + a job-description idea book for just ₹99." />
-<meta property="og:title" content="HireNest | ATS-Friendly Resume Templates" />
-<meta property="og:description" content="Your next opportunity starts with a better resume. Get 2 ATS-friendly resume templates + a job-description idea book for ₹99." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="hirenest-logo.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="theme-color" content="#0f0f0f" />
-<link rel="canonical" href="https://hire-nest-mauve.vercel.app/" />
+<title>Browse Our Resume Templates | HireNest</title>
+<meta name="description" content="Browse HireNest's editable, ATS-friendly resume templates before you buy. Fully editable in Word — starting at just ₹99." />
+<link rel="canonical" href="https://hire-nest-mauve.vercel.app/resumes.html" />
 <link rel="icon" type="image/png" href="hirenest-logo.png" />
 <link rel="apple-touch-icon" href="hirenest-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,66 +15,68 @@
 <body>
 
 <header class="site-header">
-  <a href="#home" class="brand" id="home">
+  <a href="index.html" class="brand">
     <img src="hirenest-logo.png" alt="HireNest" class="brand-logo" />
     <span>HireNest</span>
   </a>
   <nav class="main-nav">
-    <a href="#offer">Get Yours</a>
+    <a href="index.html">Home</a>
     <a href="#contact">Contact</a>
   </nav>
-  <a href="#offer" class="nav-cta">Grab yours — ₹99</a>
 </header>
 
-<main id="main">
+<main>
 
-<section class="hero">
-  <p class="eyebrow">ATS-Friendly Resume Templates</p>
-  <h1>Your next opportunity<br>starts with a better resume.</h1>
-  <p class="hero-sub">
-    Clean, ATS-friendly resume templates built for students and fresh graduates —
-    no design skills needed, just fill in your details and you're ready to apply.
+<section class="gallery-intro">
+  <p class="eyebrow center">Editable Resume Templates</p>
+  <h1>See what you'll get.</h1>
+  <p class="offer-sub">
+    Every template is fully editable in Microsoft Word — just fill in your own details
+    and you're ready to apply. Take a look before you buy.
   </p>
-  <div class="hero-actions">
-    <a href="#offer" class="btn-primary">Grab yours for just ₹99</a>
-    <a href="#offer" class="btn-ghost">See what's inside</a>
-  </div>
-  <div class="hero-badges">
-    <span>ATS-Friendly Format</span>
-    <span>Instant Digital Download</span>
-    <span>Launch Offer — ₹99</span>
-  </div>
+</section>
+
+<section class="gallery-grid">
+
+  <article class="gallery-card">
+    <img src="template-preview-1.jpg" alt="The Essential ATS resume template, blank and editable" loading="lazy" />
+    <div class="gallery-card-body">
+      <h3>The Essential ATS</h3>
+      <p class="editable-tag">Editable Resume (Word format)</p>
+      <p>A clean, ATS-friendly resume template built for students and fresh graduates.
+         Just open it in Word, fill in your details, and you're ready to apply.</p>
+    </div>
+  </article>
+
+  <article class="gallery-card">
+    <img src="template-preview-2.jpg" alt="The Essential ATS resume template, filled example" loading="lazy" />
+    <div class="gallery-card-body">
+      <h3>The Essential ATS — Filled Example</h3>
+      <p class="editable-tag">Editable Resume (Word format)</p>
+      <p>See exactly how the template looks once filled in with a real, complete resume —
+         a handy reference while you write your own.</p>
+    </div>
+  </article>
+
+  <article class="gallery-card">
+    <img src="jd-guide-preview.jpg" alt="Job description to resume keyword guide" loading="lazy" />
+    <div class="gallery-card-body">
+      <h3>Job-Description Keyword Guide</h3>
+      <p class="editable-tag">Bonus Resource (PDF)</p>
+      <p>A short, practical guide showing you how to tailor any resume to match
+         a job posting's exact keywords — before and after examples included.</p>
+    </div>
+  </article>
+
 </section>
 
 <section class="offer" id="offer">
-  <p class="eyebrow center">The HireNest Offer</p>
-  <h2>Everything you need to apply with confidence.</h2>
-  <p class="offer-sub">
-    Two ATS-friendly resume templates, ready to edit — plus a keyword guide that shows you
-    exactly how to tailor them to any job description.
-  </p>
-
-  <div class="preview-grid">
-    <figure class="preview-card">
-      <img src="template-preview-1.jpg" alt="HireNest blank editable ATS resume template" loading="lazy" />
-      <figcaption>Resume Template<br><span>Blank &amp; Editable</span></figcaption>
-    </figure>
-    <figure class="preview-card">
-      <img src="template-preview-2.jpg" alt="HireNest filled example ATS resume template" loading="lazy" />
-      <figcaption>Resume Template<br><span>Filled Example</span></figcaption>
-    </figure>
-    <figure class="preview-card">
-      <img src="jd-guide-preview.jpg" alt="HireNest job description keyword idea book" loading="lazy" />
-      <figcaption>Keyword Idea Book<br><span>Job Description → Resume</span></figcaption>
-    </figure>
-  </div>
-
   <div class="price-card">
     <p class="price-tag">Launch Offer</p>
     <p class="price">₹99</p>
     <ul class="price-list">
       <li>2 ATS-friendly resume templates (editable .docx)</li>
-      <li>Job-Description Keyword Idea Book (PDF)</li>
+      <li>Job-Description Keyword Guide (PDF)</li>
       <li>Instant digital download</li>
     </ul>
     <a class="btn-primary btn-wide"
