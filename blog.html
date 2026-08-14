@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | HireNest</title>
+<meta name="description" content="Resume tips, ATS insights, and job-search guides from HireNest — built from real resume research, not guesswork.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #faf6ef;
+    --ink: #2b2622;
+    --mauve: #8a5a6b;
+    --mauve-deep: #6f4655;
+    --line: #e6ddd0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 6vw;
+    border-bottom: 1px solid var(--line);
+  }
+  header a { text-decoration: none; }
+  .brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand img { height: 28px; width: auto; }
+  nav a {
+    margin-left: 28px;
+    color: var(--mauve-deep);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 6vw 100px;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    color: var(--mauve);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    margin: 0 0 12px;
+    line-height: 1.15;
+  }
+  .lede {
+    color: #5b544c;
+    font-size: 1.05rem;
+    max-width: 52ch;
+    margin: 0 0 56px;
+  }
+  .post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--line);
+  }
+  .post {
+    display: block;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+  }
+  .post:hover .post-title { color: var(--mauve-deep); }
+  .post-date {
+    font-size: 0.82rem;
+    color: #948b80;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .post-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin: 0 0 8px;
+    transition: color 0.15s ease;
+  }
+  .post-excerpt {
+    color: #5b544c;
+    font-size: 0.98rem;
+    margin: 0;
+  }
+  footer {
+    text-align: center;
+    padding: 32px 6vw;
+    font-size: 0.85rem;
+    color: #948b80;
+    border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand">
+    <img src="hirenest-logo.png" alt="HireNest">
+    HireNest
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="resumes.html">Templates</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">HireNest Blog</p>
+  <h1>Resume advice worth reading.</h1>
+  <p class="lede">Practical, no-fluff guides on ATS systems, resume formatting, and job applications — written from real resume research, for students and fresh graduates.</p>
+
+  <ul class="post-list">
+    <li>
+      <a class="post" href="blog/ats-friendly-resume-mistakes.html">
+        <span class="post-date">14 August 2026</span>
+        <p class="post-title">ATS Resume Mistakes That Get You Rejected Before a Human Sees It</p>
+        <p class="post-excerpt">Applicant Tracking Systems reject most resumes before a recruiter ever opens them. Here's exactly what trips the filter — and how to fix it.</p>
+      </a>
+    </li>
+    <!-- Add new <li> blocks here for future posts -->
+  </ul>
+</main>
+
+<footer>
+  <img src="hirenest-logo.png" alt="HireNest" style="height:22px;vertical-align:middle;margin-right:6px;">
+  HireNest &nbsp;·&nbsp; thyhirenest@gmail.com &nbsp;·&nbsp; © 2026 HireNest. All rights reserved.
+</footer>
+
+</body>
+</html>
